@@ -93,7 +93,7 @@ p{
     cursor: pointer;                   
     a{  font-size: 16px;
         font-weight: bolder;
-        color: $golapi;
+        color: $text-color;
     }
     padding: 18px;
     background-color: $body-color;
@@ -299,6 +299,7 @@ header{
          background-color: $box-color;
          box-shadow: $box_shdow;
          box-sizing: border-box;
+         @include border-radious(5px);
         }
         .fe_card:hover{
             .more{
@@ -321,12 +322,197 @@ header{
     margin: 0 auto;
     padding: 100px 0px;
     .sec_title_fast{
+        margin-bottom: 50px;
         text-align: center;
     }
 
      .port_cards{
+        display: flex;
+        justify-content: space-between;
         .port_card{
-            
+            overflow: hidden;
+            cursor: pointer;
+            margin-top: 50px;
+            width: calc(33% - 2%);
+            padding: 30px;
+            background-color: $box-color;
+            box-shadow: $box_shdow;
+            box-sizing: border-box;
+            @include border-radious(10px);
+        }
+        .port_card:hover{
+            .img{
+                img{
+                    @include transform-scale(1.1);
+
+                }
+            }
+            .iteml_card_link:hover{
+                i{  color: $golapi;
+                    font-size: 20px;
+                }
+                margin: 10px 0px;
+            a{
+                color: $golapi;
+            }
+            }
+            background: linear-gradient(to right bottom, #212428, #16181c);
+        }
+        .img{  @include border-radious(10px);
+            overflow: hidden;
+            img{
+                @include border-radious(10px);
+                max-width: 100%;
+            }
+        }
+        .port_card_desc{
+            .iteml_card_link{
+                i{
+                    font-size: 0px;
+                }
+                margin: 10px 0px;
+            a{
+                color: $text-color;
+            }
+            }
+            .detail{
+                display: flex;  
+                justify-content: space-between;
+                padding: 15px 0px 10px 0px;
+              .item{
+                text-transform: capitalize;
+                color: $text-color;
+                font-size: 14;
+              }  
+              .loves{
+  
+                color: $golapi;
+                font-size: 14;
+              }
+            }
         }
      }
+}
+
+
+//  clients and prinching 
+
+.client_princ{
+    display: flex;
+    max-width:  1280px;
+    margin: 0 auto;
+    padding: 100px 0px;
+    .clents{
+        max-width: 50%;
+        padding-right: 50px;
+     .brends_card{
+        display: flex;
+        justify-content: space-between;  
+        margin-top: 30px;
+        .brend_card{
+            .img{
+                display: flex;
+                justify-content: center;
+                padding: 20px 0px;
+                img{
+                    max-width: 100%;
+                    height: 200px;
+                }
+            }
+            .brend_name{
+                border-top: 1px solid #191B1E;
+                padding-top: 20px;
+                text-transform: capitalize;
+                text-align: center;
+                color: #C4CFDE;
+                font-weight: 400;
+            }
+            overflow: hidden;
+            cursor: pointer;
+            margin-top: 30px;
+            width: calc(50% - 4%);
+            padding: 30px;
+            background-color: $box-color;
+            box-shadow: $box_shdow;
+            box-sizing: border-box;
+            @include border-radious(10px);
+        }
+        .brend_card:hover{
+            background: linear-gradient(to right bottom, #212428, #16181c);
+
+        }
+     }
+    }
+    .prinching{
+          
+        .prinching_card{ 
+            margin-top: 60px;
+            box-shadow: $box_shdow;
+            background-color: $box-color;
+            
+        }
+        .buttons{
+            width: 100%;
+            button{
+                width: 100%; 
+            }
+            display: flex;
+        }
+        .article{
+            .note{
+                text-align: center;
+                padding-top: 20px;
+            }
+       .prm_button{
+        width: 100%;
+       }
+            .fetures{
+                padding: 20px 0px;
+                ul{
+                    li{
+                        line-height: 45px;
+                        i{
+                            padding-right: 5px;
+                        }
+                        font-size: 18px;
+                        color: #C4CFDE;
+                    }
+                }
+            }
+             padding: 50px;
+            .prize_nam{
+                .prize_val{
+                  padding: 10px 20px;  
+                  box-shadow: $box_shdow;  
+                 font-size:30px;   
+                 font-weight: bold;
+                color: #FF013E;
+                background: linear-gradient(to right bottom, #212428, #16181c); 
+                }
+              
+            }
+            .prize{
+                justify-content: space-between;
+                align-items: center;
+                display: flex;
+                padding: 15px 0px;
+            }
+            .prize_head{
+
+                color: $text-color;
+
+            }
+           
+        }
+       max-width: 50%;
+       padding-left: 50px;
+       .prm_button:hover{
+        transform: translateY(0px);
+        background: linear-gradient(to right bottom, #212428, #16181c);
+        -webkit-transform: translateY(0px);
+        -moz-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+        -o-transform: translateY(0px);
+}
+    }
 }

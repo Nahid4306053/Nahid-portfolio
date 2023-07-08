@@ -1,7 +1,85 @@
+
+// ======================common csss===========================================
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@mixin transition($value) {
+    transition: $value;
+    -webkit-transition: $value;
+    -moz-transition: $value;
+    -ms-transition: $value;
+    -o-transition: $value;
+}
+
+@mixin transform-scale($value) {
+    transform: scale($value);
+    -webkit-transform: scale($value);
+    -moz-transform: scale($value);
+    -ms-transform: scale($value);
+    -o-transform: scale($value);
+}
+
+@mixin transform-rotate($value) {
+    transform: rotate($value);
+    -webkit-transform: rotate($value);
+    -moz-transform: rotate($value);
+    -ms-transform: rotate($value);
+    -o-transform: rotate($value);
+}
+
+@mixin border-radious($value) {
+    border-radius: $value ;
+    -webkit-border-radius: $value ;
+    -moz-border-radius: $value ;
+    -ms-border-radius: $value ;
+    -o-border-radius: $value ;
+}
+
+$body-color:#212428;
+$box-color:#202327;
+$grdiannt-color:#16181c;
+$monsatret:"Montserrat", sans-serif;
+$text-color: #C4CFDE;
+$input-bg:#191B1E;
+p{
+font-size: 16px;
+line-height:30px;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    @include transition(.5s);
+}
+
 body{
     overflow-x: hidden;
     padding: 0;
     margin: 0;
-    display: flex;
-    justify-content: center ;
+    font-family: 'Montserrat', sans-serif;
 }
+
+a{
+    text-decoration: none;
+}
+ul{
+    li{
+        a{
+            text-decoration: none;
+        }
+    }
+}
+
+button{
+    a{
+        text-decoration: none;
+    }
+}
+
+p{  
+    font-size: 16px;
+    color: $text-color;
+}
+

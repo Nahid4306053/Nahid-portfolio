@@ -41,13 +41,17 @@ $grdiannt-color:#16181c;
 $monsatret:"Montserrat", sans-serif;
 $text-color: #C4CFDE;
 $input-bg:#191B1E;
+$golapi :#FF013E ;
+
+$box_shdow:   15px 15px 25px #1c1e22,
+-15px -15px 25px #262a2ec9; 
 p{
 font-size: 16px;
 line-height:30px;
 }
 
 
-*{
+*{ 
     padding: 0;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
@@ -55,6 +59,8 @@ line-height:30px;
 }
 
 body{
+    height: 100000px;
+    background-color: $body-color;
     overflow-x: hidden;
     padding: 0;
     margin: 0;
@@ -65,7 +71,7 @@ a{
     text-decoration: none;
 }
 ul{
-    li{
+    li{list-style: none;
         a{
             text-decoration: none;
         }
@@ -74,12 +80,253 @@ ul{
 
 button{
     a{
-        text-decoration: none;
+        text-decoration: none;    
     }
 }
-
+ 
 p{  
     font-size: 16px;
     color: $text-color;
 }
 
+.prm_button{
+    cursor: pointer;                   
+    a{  font-size: 16px;
+        font-weight: bolder;
+        color: $golapi;
+    }
+    padding: 18px;
+    background-color: $body-color;
+    border: none;
+    box-shadow: $box_shdow;
+    @include border-radious(5px);
+}
+.prm_button:hover{
+     transform: translateY(-5px);
+     background: linear-gradient(to right bottom, #212428, #16181c);
+     -webkit-transform: translateY(-5px);
+     -moz-transform: translateY(-5px);
+     -ms-transform: translateY(-5px);
+     -o-transform: translateY(-5px);
+}
+
+
+.sec_title_fast{        
+    padding-right: 50px;
+    .sec_sub_head{
+        color: #FF013E;
+
+          text-transform: uppercase;
+    }
+    .sec_main_head{
+        
+        margin: 10px 0px;
+        font-size: 60px;
+        color: white;
+    }
+  }
+
+
+// ========== headear section start ==========
+
+header{
+    
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+         margin: 0 auto;
+        max-width: 1280px;
+        padding: 30px 0px;
+        .navbar_brend{
+            a{ display: flex;
+                align-items: center;
+                font-size: 30px;
+                text-transform: uppercase;
+                color: white;
+                font-weight: bolder;
+                img{
+                    @include border-radious(100px);
+                    border: 3px solid rgb(255, 255, 255);
+                    margin-right: 10px;
+                    width: 50px;
+                    height: 52px;
+                }
+            }
+            
+        }
+       
+        // manuss start
+
+        .manus{ 
+            display: flex;
+            align-items: center;
+            padding: 0;
+            .nav_item{
+                 
+                .nav_link{
+                    text-transform: uppercase;
+                    font-size: 13px;
+                    color: white;
+                    font-weight: 300;
+                    margin-left: 15px;
+                }
+                .nav_link:hover{
+                  color: #FF013E;
+                } 
+            }
+        }
+
+    }
+}
+
+// ========== headear section start ==========
+
+
+.banner_container{
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    padding: 100px 0px;
+    align-items: center; 
+    justify-content: space-between;
+    .ban_art_ceontainer{
+
+      max-width: 60%;
+      .ban_title_fast{        
+        padding-right: 50px;
+        .ban_sub_head{
+            color: #FF013E;
+    
+              text-transform: uppercase;
+        }
+        .ban_main_head{
+            
+            margin: 10px 0px;
+            font-size: 60px;
+            color: white;
+        }
+      }
+    }     
+
+    .ban_sec{ 
+        margin-top: 50px;
+        display: flex;
+        .soicl_ti{
+           
+
+            color: $text-color;
+            font-weight: normal;
+            text-transform: uppercase;
+        }
+        .prm_button{
+          a{
+            color: white;
+          }
+        i{
+            color: white;
+        }
+        }
+    }
+     .ban_profile{
+
+        padding-left: 20px;
+      max-width: 40%;
+      .img{
+        padding: 0;
+        position: relative;
+        .hidden_bac{       
+         position: absolute;
+
+         height: 80%;
+         width: 100%;
+         top: 19%;
+         background-color: $box-color;
+         box-shadow: $box_shdow;
+          z-index: 1;
+        }
+        img{
+            padding: 0;
+            position: relative;
+            z-index: 10 ;
+            max-width: 100%;
+        }
+
+      }
+     }
+}
+
+//  what i do secton
+
+.what_i_do{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 100px 0px ;
+    .fe_cards{
+        display: flex;
+        justify-content: space-between;
+        .fe_card{
+            @include transition(.8s);
+            .more{
+            
+                i{  font-size: 25px;
+                    height: 0px;  
+                    margin-top: 0px;
+                    color: $golapi;
+
+                    opacity: 0;
+                }
+            }
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            height: 320px;
+            .card_icon{
+                
+                font-size: 40px;
+                color: $golapi;
+            }
+            @include border-radious(5px);
+            .card_head{
+                font-size: 24px;
+                text-transform: capitalize;
+                color: $text-color;
+                margin: 15px 0px;
+
+            }
+         width: calc(33% - 2%);
+         padding: 30px;
+         background-color: $box-color;
+         box-shadow: $box_shdow;
+         box-sizing: border-box;
+        }
+        .fe_card:hover{
+            .more{
+                
+             i{ 
+                opacity: 1;
+                 margin-top: 20px;
+                 height: 25px;
+             }
+            }
+            background: linear-gradient(to right bottom, #212428, #16181c);
+        }
+    }
+}
+
+
+
+.protfolio{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 100px 0px;
+    .sec_title_fast{
+        text-align: center;
+    }
+
+     .port_cards{
+        .port_card{
+            
+        }
+     }
+}
